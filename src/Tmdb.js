@@ -31,7 +31,7 @@ export default {
                 title: "Documentários",
                 items: await basicFecth(`/discover/movie?with_genres=99&language=pt-BR&api_key=${API_KEY}`)
             }
-        ]
+        ];
     },
 
     getMovieInfo: async (movieId, type) => {
