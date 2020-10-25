@@ -4,8 +4,8 @@ import './FeatureMovie.css';
 export default ({ item }) => {
     console.log(item);
     let firstDate = new Date(item.first_air_date);
-    let arrayGenres=[];
-    for(let i in item.genres){
+    let arrayGenres = [];
+    for (let i in item.genres) {
         arrayGenres.push(item.genres[i].name)
     }
 
@@ -26,8 +26,8 @@ export default ({ item }) => {
                     </div>
                     <div className="featured--description">{item.overview}</div>
                     <div className="featured--buttons">
-                        <a href={`/watch/${item.id}`}>Assistir</a>
-                        <a href={`/list/add/${item.id}`}>+ Minha Lista</a>
+                        <a href={`/watch/${item.id}`} className="featured--watchbutton">Assistir</a>
+                        <a href={`/list/add/${item.id}`} className="featured--mylistbutton">+ Minha Lista</a>
                     </div>
                     <div className="featured--genres">
                         <strong>Gêneros:</strong> {arrayGenres.join(', ')}
@@ -35,7 +35,7 @@ export default ({ item }) => {
 
                 </div>
             </div>
-        </section>
+        </section >
 
     )
 }

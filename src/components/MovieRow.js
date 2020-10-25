@@ -13,7 +13,6 @@ export default ({ title, items }) => {
                             <img src={`https://image.tmdb.org/t/p/w300${item.poster_path}`} />
                         </div>
                     ))}
-
                 </div>
             </div>
         </div>
